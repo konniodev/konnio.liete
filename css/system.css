@@ -1,0 +1,85 @@
+header {
+	background: #5A7C3F; /*#417619*/
+	padding: 5px;
+	height: 60px;
+}
+
+@font-face {
+     font-family: Neou-Thin;
+     src: url('Neou-Thin.otf');
+     font-weight: normal;
+     font-style: normal;
+}
+
+header h1 {
+	display: inline-block;
+	font-size: 55px;
+    margin: 10px 10px;
+    font-family: Neou-Thin;
+}
+
+header h1 a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+header h1 a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+nav {
+	position: absolute;
+	right: 30px;
+	top: 25px;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+nav li a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	color: #303336;
+}
+
+nav li a:active {
+	color: #000000;
+}
+
+body {
+	background: #ffffff;
+	font-family: helvetica,arial;
+	color: #303336; 
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #303336;
+}
+
+a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+p {
+	padding: 5px;	
+}
+
+h1 {
+	font-size: 40px;
+	margin: 15px 0;
+}
+
+footer {
+	font-size: 13px;
+	text-align: center;
+	padding: 20px;
+}

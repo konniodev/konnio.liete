@@ -9,4 +9,9 @@ spl_autoload_register(function (string $classFullName) {
     }    
 });
 
+function init() {
+    session_start();
+    require_once 'config.inc';
+}
+
 ?>
