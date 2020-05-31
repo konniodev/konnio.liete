@@ -7,12 +7,16 @@ class Database
     private string $port;
     private string $user;
     private string $password;
+    private string $databasename;
+    private string $charset;
     
-    public function __construct($host, $port, $user, $password){
+    public function __construct($host, $port, $user, $password, $databasename, $charset){
         $this->host = $host;
         $this->port = $port;
         $this->user = $user;
         $this->password = $password;
+        $this->databasename = $databasename;
+        $this->charset = $charset;
     }
     
     public function __destruct(){
@@ -52,6 +56,23 @@ class Database
     }
 
     /**
+     * @return mixed
+     */
+    public function getDatabasename()
+    {
+        return $this->databasename;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCharset()
+    {
+        return $this->charset;
+    }
+
+
+    /**
      * @param mixed $host
      */
     public function setHost(string $host)
@@ -84,7 +105,25 @@ class Database
     }
     
     public function querySql(string $query){
-        
+        $options = [
+            \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
+            \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
+            \PDO::ATTR_EMULATE_PREPARES   => false,
+        ];
+        $dsn = "mysql:host=$this->host;dbname=$this->databasename;port=$this->port";
+        echo $dsn;
+        echo "<br>";
+        try {
+            $pdo = new \PDO($dsn, $this->user, $this->password, $options);
+            $stmt = $pdo->query($query);
+            $result = $stmt->fetch();
+
+        } catch (\PDOException $e) {
+            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+        }
+
+        return $result;
+
     }
     
     
