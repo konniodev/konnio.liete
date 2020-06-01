@@ -83,3 +83,21 @@ footer {
 	text-align: center;
 	padding: 20px;
 }
+
+form label {
+	color: #5A7C3F;
+	font-size: 16px;
+	font-weight: bold;
+	display: block;
+	padding: 5px 0;
+}
+
+form input {
+	color: #5A7C3F;
+	font-size: 16px;
+	border: 1px solid #5A7C3F;
+	padding-top: 5px;
+	border-radius: 4px;
+	height: 24px;
+	padding: 2px 2px;
+}

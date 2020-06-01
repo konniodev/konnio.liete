@@ -7,14 +7,16 @@ require_once 'sysheader.php';
 
 ?>
  <main>
-  <form method="post">
-    <label>Usuario</label><br>
-    <input type="text" name="user"><br>
-    <label>Senha</label><br>
-    <input type="password" name="password"><br>
-    <input type="submit"><br>
-    <a href="forgottenpwd.php">Esqueci minha senha</a><br>
-    <a href="createuser.php">Criar minha conta</a>
-  </form>	
+  <div id="loginForm" class="login">
+    <form method="post" class="loginForm">
+      <label for="user" class="loginLabel">Usuario</label>
+      <input type="text" id="user" name="user" class="formField">
+      <label for="password" class="loginLabel">Senha</label>
+      <input type="password" id="password" name="password" class="formField">
+      <input type="submit">
+      <a href="forgottenpwd.php">Esqueci minha senha</a>
+      <a href="createuser.php">Criar minha conta</a>
+    </form>	
+  </div>
  </main>
 <?php require_once 'sysfooter.php';?>
