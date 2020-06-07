@@ -11,6 +11,7 @@ class Database
     private string $charset;
     
     public function __construct($host, $port, $user, $password, $databasename, $charset){
+        applog("INFO","Started Database constructor");
         $this->host = $host;
         $this->port = $port;
         $this->user = $user;
@@ -105,21 +106,22 @@ class Database
     }
     
     public function querySql(string $query){
+        applog("DEBUG","running sql: " . $query);
         $options = [
             \PDO::ATTR_ERRMODE            => \PDO::ERRMODE_EXCEPTION,
             \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
             \PDO::ATTR_EMULATE_PREPARES   => false,
         ];
         $dsn = "mysql:host=$this->host;dbname=$this->databasename;port=$this->port";
-        echo $dsn;
-        echo "<br>";
         try {
             $pdo = new \PDO($dsn, $this->user, $this->password, $options);
             $stmt = $pdo->query($query);
             $result = $stmt->fetch();
 
         } catch (\PDOException $e) {
-            throw new \PDOException($e->getMessage(), (int)$e->getCode());
+            //throw new \PDOException($e->getMessage(), (int)$e->getCode());
+            applog("ERROR","Database created an exception " . $e->getMessage() . "-" . $e->getCode());
+            $result = false;
         }
 
         return $result;

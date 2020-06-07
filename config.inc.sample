@@ -1,0 +1,18 @@
+<?php 
+// Settings
+define("LANGUAGE", "pt-br");
+define("ABSOLUTEURL", "http://localhost/liete/");
+define("ROOTFILEDIR", "C:/inetpub/www/konnio.liete/");
+define("API", "api/");
+define("STDLOG", "log/stdout.log");
+define("TIMEZONE", "America/Sao_Paulo");
+
+// Database configuration
+define("DATABASEHOST", "<<your_server>>");
+define("DATABASEUSER", "<<your_user>>");
+define("DATABASEPASSWORD", "<<your_password>>");
+define("DATABASEPORT", "3306");
+define("DATABASENAME", "liete");
+define("DATABASECHARSET", "utf8_general_ci");
+
+?>

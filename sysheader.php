@@ -5,7 +5,7 @@
 <title>Sistema Liete</title>
 <link rel="stylesheet" href="<?php echo ABSOLUTEURL; ?>css/reset.css">
 <link rel="stylesheet" href="<?php echo ABSOLUTEURL; ?>css/system.css">
-<link rel="javascrip" href="<?php echo ABSOLUTEURL; ?>js/jquery-3.4.1.min.js">
+<script src="<?php echo ABSOLUTEURL; ?>js/jquery-3.4.1.min.js" type="text/javascript"></script>
 </head>
 
 <body>

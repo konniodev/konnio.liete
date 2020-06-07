@@ -1,4 +1,4 @@
-<?php require_once 'system/config.inc';?>
+<?php require_once 'config.inc';?>
 <!DOCTYPE html>
 <html lang="<?php echo LANGUAGE; ?>">
 <head>
@@ -6,7 +6,7 @@
 <title>Liete</title>
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/liete.css">
-<link rel="javascrip" href="js/jquery-3.4.1.min.js">
+<script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
 </head>
 
 <body>

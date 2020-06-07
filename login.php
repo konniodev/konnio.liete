@@ -15,7 +15,7 @@ require_once 'sysheader.php';
       <input type="password" id="password" name="password" class="formField">
       <input type="submit">
       <a href="forgottenpwd.php">Esqueci minha senha</a>
-      <a href="createuser.php">Criar minha conta</a>
+      <a href="../signup.php">Criar minha conta</a>
     </form>	
   </div>
  </main>

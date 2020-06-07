@@ -1,0 +1,12 @@
+{
+    "name": "konnio/liete",
+    "description": "Real state portal",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Konnio Development",
+            "email": "developer@konnio.com"
+        }
+    ],
+    "require": {}
+}
